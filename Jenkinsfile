@@ -3,12 +3,10 @@ pipeline {
         DOMAIN='apps.ocp4.example.com'
         PRJ="hello-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='nodeapp'
-        APP='myapp'
     }
     agent {
       node {
         label 'nodejs'
-        label 'myapp'
       }
     }
     stages {
